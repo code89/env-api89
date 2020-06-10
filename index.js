@@ -14,5 +14,7 @@ const port = 3000
 
 app.get('/', (req, res) => res.send('<h1>env-app</h1>'))
 
+app.get('/api', (req, res) => res.send(process.env.API_KEY))
+
 app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`))
 
